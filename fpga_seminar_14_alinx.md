@@ -197,26 +197,20 @@ img[alt~="center"] {
 
 ![bg width:28cm](./figure/gt_ethernet_design.drawio.png)
 
-## 余談：RTLモジュール使用時の便利機能 (1/7)
+## 余談：RTLモジュール使用時の便利機能 (1/6)
 
 * Vivado 2019くらい？から、IP Integratorに簡単にRTLモジュールを配置する機能が追加された
 * *.v ファイルをD&Dするだけ
   * (*.sv だと怒られるのはどうにかしてほしい…)
 * 仕組みは、 IP Packagerのインターフェース自動推論とほぼ同じ
 
-## 余談：RTLモジュール使用時の便利機能 (2/7)
+## 余談：RTLモジュール使用時の便利機能 (2/6)
 
 * 欠点：自動推論がうまくいかなくて困ったことになる
   * クロック周りの設定とかでIP IntegeratorのValidationで怒られたりする
   * リセットの極性… **n** がついてれば負論理だが、正論理は…
 
-## 余談：RTLモジュール使用時の便利機能 (3/7)
-
-* 欠点：自動推論がうまくいかなくて困ったことになる
-  * クロック周りの設定とかでIP IntegeratorのValidationで怒られたりする
-  * リセットの極性… **n** がついてれば負論理だが、正論理は…
-
-## 余談：RTLモジュール使用時の便利機能 (4/7)
+## 余談：RTLモジュール使用時の便利機能 (3/6)
 
 * UG994のRTLモジュールのところにいろいろ書いてある
   * https://docs.xilinx.com/r/en-US/ug994-vivado-ip-subsystems/Referencing-RTL-Modules
@@ -224,7 +218,7 @@ img[alt~="center"] {
   * `X_INTERFACE_INFO`, `X_INTERFACE_PARAMETER` など
 * 今回は GT WIzardで生成したモジュールをIP Integratorに配置するのに利用
 
-## 余談：RTLモジュール使用時の便利機能 (5/7)
+## 余談：RTLモジュール使用時の便利機能 (4/6)
 
 * クロック出力のクロック周波数を `FREQ_HZ` に設定
   * 156.25[MHz]を設定
@@ -237,7 +231,7 @@ img[alt~="center"] {
   output wire rx_clk,
 ```
 
-## 余談：RTLモジュール使用時の便利機能 (6/7)
+## 余談：RTLモジュール使用時の便利機能 (5/6)
 
 * リセットの極性を `POLARITY` に設定
   * `ACTIVE_HIGH`
@@ -250,7 +244,7 @@ img[alt~="center"] {
   input  wire hb_gtwiz_reset_all_in,
 ```
 
-## 余談：RTLモジュール使用時の便利機能 (7/7)
+## 余談：RTLモジュール使用時の便利機能 (6/6)
 
 * MIIのインターフェース定義
   * `X_INTERFACE_MODE` で `SLAVE` `MASTER` 設定
